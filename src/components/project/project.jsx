@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ActionButton } from '../ActionButton/ActionButton';
-import styles from './project.module.scss'
+import styles from './project.module.scss';
 
 const re = /[0-9A-Fa-f]{4}/g;
 
@@ -92,6 +92,7 @@ export const Project = () => {
     <>
       <div className={styles.lewy}>
         <div className={styles.lewyreg}>
+          <h1>Emulator procesora 8086</h1>
           <div className={styles.lewyregc}>
             
             AX 
@@ -131,6 +132,31 @@ export const Project = () => {
           </button>
           <ActionButton from="ax" to="bx" handleClick={zmiana2}/>
           <ActionButton isChange from="ax" to="bx" handleClick={zmiana2}/>
+          <ActionButton from="ax" to="cx" handleClick={zmiana2}/>
+          <ActionButton isChange from="ax" to="cx" handleClick={zmiana2}/>
+          <ActionButton from="ax" to="dx" handleClick={zmiana2}/>
+          <ActionButton isChange from="dx" to="dx" handleClick={zmiana2}/>
+
+          <ActionButton from="bx" to="ax" handleClick={zmiana2}/>
+          <ActionButton isChange from="bx" to="dx" handleClick={zmiana2}/>
+          <ActionButton from="bx" to="dx" handleClick={zmiana2}/>
+          
+          
+          <ActionButton isChange from="cx" to="dx" handleClick={zmiana2}/>
+          <ActionButton from="cx" to="ax" handleClick={zmiana2}/>
+          
+          <ActionButton isChange from="bx" to="cx" handleClick={zmiana2}/>
+          
+          <ActionButton from="cx" to="bx" handleClick={zmiana2}/>
+          <ActionButton from="cx" to="dx" handleClick={zmiana2}/>
+          
+
+          <ActionButton from="dx" to="ax" handleClick={zmiana2}/>
+          <ActionButton from="bx" to="cx" handleClick={zmiana2}/>
+          <ActionButton from="dx" to="bx" handleClick={zmiana2}/>
+          <ActionButton from="dx" to="cx" handleClick={zmiana2}/>
+
+
         </div>
         {error && <p>Podana wartość nie spełnia wymagań.</p>}
       </div>
