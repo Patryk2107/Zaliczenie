@@ -96,7 +96,7 @@ export const Project = () => {
             reset
           </button>
           <button onClick={randomize}>
-            random
+            randommmm
           </button>
         </div>
         <div className={styles.leftRegisters}>
