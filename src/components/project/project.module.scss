@@ -1,31 +1,38 @@
-.left {
+.lewy {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 16px;
 }
 
-.leftButtons {
+.lewyprzycisk {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-.leftRegisters {
+.lewyreg {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.leftRegisterContainer {
+.lewyregc {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-.leftRegisterButtonsContainer {
+.lewyglowny {
   display: grid;
   grid-template-columns: 150px 150px;
   grid-column-gap: 16px;
   grid-row-gap: 16px;
+}
+button{
+  background-color: blue;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  width: 65%;
+  border-radius: 0fr;
 }
