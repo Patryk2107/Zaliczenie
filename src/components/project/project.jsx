@@ -23,7 +23,7 @@ export const Project = () => {
   })
 
 
-  const handleClickActionButton = (from, to, change) => {
+  const zmiana2 = (from, to, change) => {
     if (change) {
       setRegister(prev => ({
         ...prev,
@@ -62,7 +62,7 @@ export const Project = () => {
     });
   }  
 
-  const handleFormChange = (value, key) => {
+  const zmiana = (value, key) => {
     if (value.length === 4) {
       if (re.test(value)) {
         setRegister(prev => ({
@@ -90,50 +90,49 @@ export const Project = () => {
 
   return (
     <>
-      <div className={styles.left}>
-        <div className={styles.leftButtons}>
-          <button onClick={reset}>
-            reset
-          </button>
-          <button onClick={randomize}>
-            randommmm
-          </button>
-        </div>
-        <div className={styles.leftRegisters}>
-          <div className={styles.leftRegisterContainer}>
+      <div className={styles.lewy}>
+        <div className={styles.lewyreg}>
+          <div className={styles.lewyregc}>
+            
             AX 
             <input type="text" disabled value={register.ax}>
             </input>
-            <input type="text" value={form.ax} onChange={e => handleFormChange(e.target.value, 'ax')}>
+            <input type="text" value={form.ax} onChange={e => zmiana(e.target.value, 'ax')}>
             </input>
           </div>
-          <div className={styles.leftRegisterContainer}>
+          <div className={styles.lewyregc}>
             BX 
             <input type="text" disabled value={register.bx}>
             </input>
-            <input type="text" value={form.bx} onChange={e => handleFormChange(e.target.value, 'bx')}>
+            <input type="text" value={form.bx} onChange={e => zmiana(e.target.value, 'bx')}>
             </input>
           </div>
-          <div className={styles.leftRegisterContainer}>
-            CX 
+          <div className={styles.lewyregc}>
+            CX
             <input type="text" disabled value={register.cx}>
             </input>
-            <input type="text" value={form.cx} onChange={e => handleFormChange(e.target.value, 'cx')}>
+            <input type="text" value={form.cx} onChange={e => zmiana(e.target.value, 'cx')}>
             </input>
           </div>
-          <div className={styles.leftRegisterContainer}>
+          <div className={styles.lewyregc}>
             DX 
             <input type="text" disabled value={register.dx}>
             </input>
-            <input type="text" value={form.dx} onChange={e => handleFormChange(e.target.value, 'dx')}>
+            <input type="text" value={form.dx} onChange={e => zmiana(e.target.value, 'dx')}>
             </input>
           </div>
         </div>
-        <div className={styles.leftRegisterButtonsContainer}>
-          <ActionButton from="ax" to="bx" handleClick={handleClickActionButton}/>
-          <ActionButton isChange from="ax" to="bx" handleClick={handleClickActionButton}/>
+        <div className={styles.lewyglowny}>
+        <button onClick={reset}>
+            reset
+          </button>
+          <button onClick={randomize}>
+            random
+          </button>
+          <ActionButton from="ax" to="bx" handleClick={zmiana2}/>
+          <ActionButton isChange from="ax" to="bx" handleClick={zmiana2}/>
         </div>
-        {error && <p>Niepoprawna wartość pola</p>}
+        {error && <p>Podana wartość nie spełnia wymagań.</p>}
       </div>
     </>
   );
