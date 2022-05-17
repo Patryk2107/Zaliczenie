@@ -1,0 +1,31 @@
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.leftButtons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.leftRegisters {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.leftRegisterContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.leftRegisterButtonsContainer {
+  display: grid;
+  grid-template-columns: 150px 150px;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}
